@@ -1,6 +1,3 @@
-
-// app.js
-
 const express = require('express');
 const connectDB = require('./config/db');
 var cors = require('cors');
@@ -9,6 +6,9 @@ var cors = require('cors');
 const books = require('./routes/api/books');
 
 const app = express();
+
+const books = require("./routes/api/books");
+app.use("api/books", books);
 
 // Connect Database
 connectDB();
